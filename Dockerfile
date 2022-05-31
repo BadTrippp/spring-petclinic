@@ -1,5 +1,5 @@
-FROM openjdk:11.0.15-jre
+FROM maven
 
 COPY target/*.jar /web.jar
 
-CMD java -jar spring-petclinic-*.jar
+ENTRYPOINT [ "java", "-jar", "/web.jar" ]
